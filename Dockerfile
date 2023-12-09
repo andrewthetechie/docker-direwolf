@@ -6,6 +6,7 @@ RUN apt-get update && apt-get -y dist-upgrade \
     libusb-1.0-0 \
     libhamlib2 \
     libgps23 \
+    netcat \
  && rm -rf /var/lib/apt/lists/*
 
 FROM base as builder
@@ -16,8 +17,7 @@ RUN apt-get update && apt-get install -y \
     libasound2-dev \
     libusb-1.0-0-dev \
     libhamlib-dev \
-    libgps-dev \
-    netcat \   
+    libgps-dev \ 
  && rm -rf /var/lib/apt/lists/*
 
 RUN git clone "https://github.com/wb2osz/direwolf.git" /tmp/direwolf \
