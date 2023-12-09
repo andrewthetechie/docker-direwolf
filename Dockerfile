@@ -16,7 +16,8 @@ RUN apt-get update && apt-get install -y \
     libasound2-dev \
     libusb-1.0-0-dev \
     libhamlib-dev \
-    libgps-dev \   
+    libgps-dev \
+    netcat \   
  && rm -rf /var/lib/apt/lists/*
 
 RUN git clone "https://github.com/wb2osz/direwolf.git" /tmp/direwolf \
