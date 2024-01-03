@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y \
     libgps-dev \ 
  && rm -rf /var/lib/apt/lists/*
 
-RUN git clone clone --depth 1 --branch $DIREWOLF_VERSION "https://github.com/wb2osz/direwolf.git" /tmp/direwolf \
+RUN git clone --depth 1 --branch $DIREWOLF_VERSION "https://github.com/wb2osz/direwolf.git" /tmp/direwolf \
   && cd /tmp/direwolf \
   && mkdir build && cd build \
   && cmake .. \
